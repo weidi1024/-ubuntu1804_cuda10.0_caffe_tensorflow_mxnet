@@ -16,9 +16,9 @@ GeForce GTX 1080 Ti/PCIe/SSE2 <br>
 ubuntu软件-下载自-进入修改为国内的地址
 关闭并更新
 升级
-`sudo apt-get update
+sudo apt-get update
 sudo apt-get upgrade
-`
+
 #### 安装pip
 `
 sudo apt-get install python-pip python-dev build-essential
