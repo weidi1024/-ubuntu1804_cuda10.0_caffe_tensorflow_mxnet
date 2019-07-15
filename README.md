@@ -8,29 +8,29 @@ GeForce GTX 1080 Ti/PCIe/SSE2 <br>
 
 ------------
 
-### 安装系统
+#### 安装系统
 下载ubuntu1804系统安装包
 
-### apt换源
+#### apt换源
 打开软件和更新
 ubuntu软件-下载自-进入修改为国内的地址
 关闭并更新
 升级
-```bash
-sudo apt-get update
+`sudo apt-get update
 sudo apt-get upgrade
-```
-### 安装pip
-```bash
+`
+#### 安装pip
+`
 sudo apt-get install python-pip python-dev build-essential
 sudo pip install --upgrade pip
-```
+`
 ### pip换源
  修改 ~/.pip/pip.conf (没有就创建一个)， 如下：
-mkdir ~/.pip/
+`mkdir ~/.pip/
 geidt ~/.pip/pip.conf
+`
 输入如下内容并保存
-```bash
+```
 [global]
 index-url = https://mirrors.aliyun.com/pypi/simple/
 ```
