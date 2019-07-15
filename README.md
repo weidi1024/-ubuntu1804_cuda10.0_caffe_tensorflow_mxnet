@@ -1,2 +1,1 @@
-# -ubuntu1804_cuda10.0_caffe_tensorflow_mxnet
-实验室电脑安装ubuntu1804_cuda10.0_caffe_tensorflow_mxnet，记录一下
+
