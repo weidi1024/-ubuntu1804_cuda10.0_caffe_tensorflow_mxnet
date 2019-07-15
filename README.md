@@ -1,54 +1,77 @@
-# 实验室电脑　安装ubuntu18.04 caffe tensorflow mxnet　过程
+### 实验室电脑　安装ubuntu18.04 caffe tensorflow mxnet　过程
 
-DELL-PRECSION TOWER 7910
-Intel® Xeon(R) CPU E5-2630 v4 @ 2.20GHz × 20 
-GeForce GTX 1080 Ti/PCIe/SSE2
-内存125.8 GiB
+#### 电脑硬件
+DELL-PRECSION TOWER 7910 <br> 
+Intel® Xeon(R) CPU E5-2630 v4 @ 2.20GHz × 20  <br> 
+GeForce GTX 1080 Ti/PCIe/SSE2 <br> 
+内存125.8 GiB <br> 
 
+------------
 
-20190711
-【安装系统】
+### 安装系统
 下载ubuntu1804系统安装包
 
-【apt换源】
+### apt换源
 打开软件和更新
 ubuntu软件-下载自-进入修改为国内的地址
 关闭并更新
-
-【安装pip】
+升级
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+### 安装pip
+```bash
 sudo apt-get install python-pip python-dev build-essential
-pip install --upgrade pip
-【pip换源】
+sudo pip install --upgrade pip
+```
+### pip换源
  修改 ~/.pip/pip.conf (没有就创建一个)， 如下：
 mkdir ~/.pip/
 geidt ~/.pip/pip.conf
 输入如下内容并保存
+```bash
 [global]
 index-url = https://mirrors.aliyun.com/pypi/simple/
+```
 pip换源之后速度真的是非常舒爽...
 
-升级
-sudo apt-get update
-sudo apt-get upgrade
 
 
-【安装显卡驱动430.34】
+
+### 安装显卡驱动
+430.34
 安装依赖项
+```bash
 sudo apt-get install dkms build-essential linux-headers-generic apt-show-versions
-禁用nouveau
+```
+禁用nouveau:
+打开文件
+```bash
 sudo gedit /etc/modprobe.d/blacklist.conf
+
+```
 在最后一行加入
+```bash
 blacklist nouveau
 blacklist lbm-nouveau
 options nouveau modeset=0
 alias nouveau off
 alias lbm-nouveau off
+```
 保存，并执行如下命令
+```bash
 echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
 sudo update-initramfs -u
-重启
+```
+重启后开始安装驱动
+```bash
 sudo ./NVIDIA-Linux-*.run
-nvidia-smi(查看nvidia信息）
+```
+终端执行
+```bash
+nvidia-smi
+```
 出现如下信息就说明安装成功了
 
 
