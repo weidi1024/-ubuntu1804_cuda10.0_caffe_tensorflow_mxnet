@@ -1,9 +1,10 @@
-#　ubuntu1804_cuda10.0_caffe_tensorflow_mxnet
-实验室电脑　安装ubuntu18.04 caffe tensorflow mxnet　过程
+# 实验室电脑　安装ubuntu18.04 caffe tensorflow mxnet　过程
+
 DELL-PRECSION TOWER 7910
 Intel® Xeon(R) CPU E5-2630 v4 @ 2.20GHz × 20 
 GeForce GTX 1080 Ti/PCIe/SSE2
 内存125.8 GiB
+
 
 20190711
 【安装系统】
